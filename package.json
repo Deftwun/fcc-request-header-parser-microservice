@@ -1,0 +1,11 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "0.0.1",
+  "description": "Free Code Camp BaseJump",
+  "main": "server.js",
+  "repository": "",
+  "author": "Jeff Wakeman <Deftwun@gmail.com>",
+  "dependencies": {
+    "express": "~3.2.4"
+  }
+}
