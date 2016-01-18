@@ -6,6 +6,9 @@
   "repository": "",
   "author": "Jeff Wakeman <Deftwun@gmail.com>",
   "dependencies": {
-    "express": "~3.2.4"
+    "express": "~3.2.4",
+    "express-useragent": "^0.2.4",
+    "get-browser-language": "^1.0.0",
+    "useragent": "^2.1.8"
   }
 }
