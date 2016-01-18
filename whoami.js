@@ -3,7 +3,7 @@ var acceptLanguage = require("accept-language");
   
 module.exports = function(req,res,next){
   var agent = useragent.parse(req.headers['user-agent']);
-  console.log(agent);
+
   req.whoami = {
     "ipaddress":req.ip,
     "language":acceptLanguage.get(req.get("Accept-Language")),

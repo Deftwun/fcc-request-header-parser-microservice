@@ -3,6 +3,8 @@ var app = express();
 
 var port = process.env.PORT || 8080;
 
+app.enable('trust proxy');
+
 app.use(require("./whoami.js"));
 
 app.get("/",function(req,res){
