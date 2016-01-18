@@ -1,24 +1,13 @@
-function getOS(req){
-
+var useragent = require("express-useragent");
+var acceptLanguage = require("accept-language");
+  
+module.exports = function(req,res,next){
   var agent = useragent.parse(req.headers['user-agent']);
-  return agent.os.toString();
-}
-
-function getIP(req){
-  return req.ip;
-}
-
-module.exports = function(req){
-  return {
+  console.log(agent);
+  req.whoami = {
     "ipaddress":req.ip,
-    "language":req.get("Accept-Language"),
-    "software":getOS(req)
+    "language":acceptLanguage.get(req.get("Accept-Language")),
+    "software":agent.os.toString()
   };
-  /*
-  return({
-    "ipaddress":getIP(req),
-    "language":getLanguage(req),
-    "software":getOS(req)
-  });
-  */
+  next();
 }
